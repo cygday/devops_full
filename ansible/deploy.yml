@@ -1,5 +1,6 @@
 
 - hosts: localhost
+  gather_facts: no
   tasks:
     - name: Deploy app on Kubernetes
-      shell: kubectl apply -f k8s/deployment.yaml
+      shell: kubectl apply -f {{ playbook_dir }}/../k8s/deployment.yaml
