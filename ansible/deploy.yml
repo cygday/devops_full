@@ -1,0 +1,5 @@
+
+- hosts: localhost
+  tasks:
+    - name: Deploy app on Kubernetes
+      shell: kubectl apply -f k8s/deployment.yaml
