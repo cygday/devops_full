@@ -12,6 +12,11 @@ pipeline {
                 echo 'Push image to registry (mocked)'
             }
         }
+        stage('debug path') {
+            steps {
+                sh 'pwd &&ls -R'
+            }
+        }
         stage('Deploy with Ansible') {
             steps {
                 sh 'ansible-playbook ansible/deploy.yml'
