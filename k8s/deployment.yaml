@@ -18,7 +18,7 @@ spec:
         image: flask-app:latest
         ports:
         - containerPort: 5000
-        imagePullPolicy: never
+        imagePullPolicy: Never
 ---
 apiVersion: v1
 kind: Service
